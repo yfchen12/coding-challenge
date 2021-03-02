@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace AccountingMetrics
@@ -63,6 +64,52 @@ namespace AccountingMetrics
             float netMargin = (revenue - expenses) / revenue;
 
             return netMargin;
+        }
+
+        public float CalWorkingCapitalRatio()
+        {
+            float assets = 0;
+            float liabilities = 0;
+            float workCapRatio;
+
+            foreach(var account in _accounts)
+            {
+                // calculate assets
+                if (account.AccountCategory.Equals("assets")) 
+                { 
+                    if ((new[] { "current", "bank", "current_accounts_receivable" }).Contains(account.AccountType))
+                    {
+                        if (account.ValueType.Equals("debit")) 
+                        {
+                            assets += account.TotalValue;
+                        }
+                        if (account.ValueType.Equals("credit"))
+                        {
+                            assets -= account.TotalValue;
+                        }
+                    }
+                }
+
+                // calculate liabilities
+                if (account.AccountCategory.Equals("liability")) 
+
+                {
+                    if ((new[] { "current", "current_accounts_payable" }).Contains(account.AccountType))
+                    {
+                        if (account.ValueType.Equals("debit"))
+                        {
+                            liabilities -= account.TotalValue;
+                        }
+                        if (account.ValueType.Equals("credit"))
+                        {
+                            liabilities += account.TotalValue;
+                        }
+                    }
+                }
+            }
+
+            workCapRatio = assets / liabilities;
+            return workCapRatio;
         }
     }
 }
