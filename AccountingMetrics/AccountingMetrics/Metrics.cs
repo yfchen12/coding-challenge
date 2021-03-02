@@ -58,5 +58,11 @@ namespace AccountingMetrics
             return grossMargin;
         }
 
+        public float CalNetProfitMargin(float revenue, float expenses)
+        {
+            float netMargin = (revenue - expenses) / revenue;
+
+            return netMargin;
+        }
     }
 }
