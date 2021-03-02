@@ -13,6 +13,9 @@ namespace AccountingMetrics
             var expenses = metrics.CalExpenses();
             Console.WriteLine($"expenses: {expenses}");
 
+            var grossMargin = metrics.CalGrossProfitMargin(revenue);
+            Console.WriteLine($"Gross Profit Margin: {grossMargin}");
+
 
         }
     }

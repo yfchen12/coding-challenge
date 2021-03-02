@@ -42,5 +42,21 @@ namespace AccountingMetrics
             return expense;
         }
 
+        public float CalGrossProfitMargin(float revenue)
+        {
+            float totalSalesInDebit = 0;
+            float grossMargin;
+            foreach(var account in _accounts)
+            {
+                if (account.AccountType.Equals("sales") && account.ValueType.Equals("debit"))
+                {
+                    totalSalesInDebit += account.TotalValue;
+                }
+            }
+
+            grossMargin = totalSalesInDebit / revenue;
+            return grossMargin;
+        }
+
     }
 }
