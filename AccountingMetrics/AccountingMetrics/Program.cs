@@ -8,7 +8,12 @@ namespace AccountingMetrics
         {
             var metrics = new Metrics(new AccountRepository("../../../../../data.json"));
             var revenue = metrics.CalRevenue();
-            Console.WriteLine($"Revenue: {revenue}");
+            Console.WriteLine($"Revenue: {revenue}");            
+            
+            var expenses = metrics.CalExpenses();
+            Console.WriteLine($"expenses: {expenses}");
+
+
         }
     }
 }

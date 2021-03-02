@@ -28,5 +28,19 @@ namespace AccountingMetrics
         }
 
 
+
+        public float CalExpenses()
+        {
+            float expense = 0;
+            foreach (var account in _accounts)
+            {
+                if (account.AccountCategory.Equals("expense"))
+                {
+                    expense += account.TotalValue;
+                }
+            }
+            return expense;
+        }
+
     }
 }
