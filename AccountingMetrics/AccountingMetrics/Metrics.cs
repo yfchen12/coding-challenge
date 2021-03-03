@@ -56,14 +56,14 @@ namespace AccountingMetrics
             }
 
             grossMargin = totalSalesInDebit / revenue;
-            return grossMargin;
+            return grossMargin * 100;
         }
 
         public float CalNetProfitMargin(float revenue, float expenses)
         {
             float netMargin = (revenue - expenses) / revenue;
 
-            return netMargin;
+            return netMargin * 100;
         }
 
         public float CalWorkingCapitalRatio()
@@ -109,7 +109,7 @@ namespace AccountingMetrics
             }
 
             workCapRatio = assets / liabilities;
-            return workCapRatio;
+            return workCapRatio*100;
         }
     }
 }

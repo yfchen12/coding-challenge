@@ -2,7 +2,7 @@
 
 namespace AccountingMetrics
 {
-    internal interface IAccountRepository
+    public interface IAccountRepository
     {
         public IList<Account> FindAllAccounts();
     }

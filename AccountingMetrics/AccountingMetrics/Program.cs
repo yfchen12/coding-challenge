@@ -15,13 +15,13 @@ namespace AccountingMetrics
             Console.WriteLine($"expenses: {expenses.ToString("c0")}");
 
             var grossMargin = metrics.CalGrossProfitMargin(revenue);
-            Console.WriteLine($"Gross Profit Margin: {(grossMargin).ToString("p0")}");
+            Console.WriteLine($"Gross Profit Margin: {(grossMargin).ToString("F0")}%");
 
             var netMargin = metrics.CalNetProfitMargin(revenue, expenses);
-            Console.WriteLine($"Gross Profit Margin: {(netMargin).ToString("p0")}");
+            Console.WriteLine($"Gross Profit Margin: {(netMargin).ToString("F0")}%");
 
             var workCapRatio = metrics.CalWorkingCapitalRatio();
-            Console.WriteLine($"Working Capital Ratio: {(workCapRatio).ToString("p0")}");
+            Console.WriteLine($"Working Capital Ratio: {(workCapRatio).ToString("F0")}%");
 
         }
     }
