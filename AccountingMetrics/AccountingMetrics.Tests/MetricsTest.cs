@@ -24,5 +24,11 @@ namespace AccountingMetrics.Tests
             Assert.Equal(7, actual);
         }
 
+        [Fact]
+        public void testCalGrossProfitMargin()
+        {
+            float actual = _metrics.CalGrossProfitMargin(3);
+            Assert.Equal(0, actual);
+        }
     }
 }
