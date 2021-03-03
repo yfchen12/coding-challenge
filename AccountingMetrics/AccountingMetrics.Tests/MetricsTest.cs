@@ -38,5 +38,12 @@ namespace AccountingMetrics.Tests
             Assert.Equal(50, actual);
         }
 
+        [Fact]
+        public void testCalWorkingCapitalRatio()
+        {
+            float actual = _metrics.CalWorkingCapitalRatio();
+            Assert.Equal(100, actual);
+        }
+
     }
 }
