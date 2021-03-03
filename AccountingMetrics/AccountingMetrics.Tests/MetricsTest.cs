@@ -12,5 +12,13 @@ namespace AccountingMetrics.Tests
             float actual = metrics.CalRevenue();
             Assert.Equal(3, actual);
         }
+
+        [Fact]
+        public void testCalExpenses()
+        {
+            var metrics = new Metrics(new FakeAccountRepository());
+            float actual = metrics.CalExpenses();
+            Assert.Equal(7, actual);
+        }
     }
 }

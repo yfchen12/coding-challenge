@@ -10,8 +10,8 @@ namespace AccountingMetrics.Tests
         {
             new Account{AccountCategory = "revenue", AccountType= "sales", ValueType = "credit", TotalValue = 1},
             new Account{AccountCategory = "revenue", AccountType= "sales", ValueType = "credit", TotalValue = 2},
-            new Account{AccountCategory = "expenses", AccountType = "overheads", ValueType = "debit", TotalValue = 3},
-            new Account{AccountCategory = "expenses", AccountType = "overheads", ValueType = "debit",TotalValue = 4},
+            new Account{AccountCategory = "expense", AccountType = "overheads", ValueType = "debit", TotalValue = 3},
+            new Account{AccountCategory = "expense", AccountType = "overheads", ValueType = "debit",TotalValue = 4},
 
         };
         public IList<Account> FindAllAccounts()
