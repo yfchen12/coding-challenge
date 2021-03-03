@@ -18,7 +18,7 @@ namespace AccountingMetrics
             Console.WriteLine($"Gross Profit Margin: {(grossMargin).ToString("F0")}%");
 
             var netMargin = metrics.CalNetProfitMargin(revenue, expenses);
-            Console.WriteLine($"Gross Profit Margin: {(netMargin).ToString("F0")}%");
+            Console.WriteLine($"Net Profit Margin: {(netMargin).ToString("F0")}%");
 
             var workCapRatio = metrics.CalWorkingCapitalRatio();
             Console.WriteLine($"Working Capital Ratio: {(workCapRatio).ToString("F0")}%");
