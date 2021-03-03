@@ -30,5 +30,13 @@ namespace AccountingMetrics.Tests
             float actual = _metrics.CalGrossProfitMargin(3);
             Assert.Equal(0, actual);
         }
+
+        [Fact]
+        public void testCalNetProfitMargin()
+        {
+            float actual = _metrics.CalNetProfitMargin(6,3);
+            Assert.Equal(50, actual);
+        }
+
     }
 }
