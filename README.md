@@ -1,10 +1,17 @@
 # 9Spokes Coding Challenge Solution
 
 ## Overview
-This repo contains my solution to the 9Spokes coding challenge. 
+This repo contains my solution to the 9Spokes coding challenge, which is a .Net core console app to calculate the common metrics, including:
+* Revenue
+* Expenses
+* Gross Profit Margin
+* Net Profit Margin
+* Working Capital Ratio
+
+xUnit is used as the unit testing framework. 
 
 ## How to run?
-To run the program, you will need to clone the feature branch of the repository to your local computer, as below:
+To run the program, you will need to clone this feature branch to your local computer, by using the Git command below:
 ```bash
 git clone -b feature/calculate_common_accounting_metrics https://github.com/yfchen12/coding-challenge.git
 ```
